@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from pilgram.css.blending import hard_light
+from pilgram2.css.blending import hard_light
 
 
 def overlay(im1, im2):

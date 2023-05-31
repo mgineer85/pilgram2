@@ -14,7 +14,8 @@
 
 import numpy as np
 from PIL import Image
-from pilgram.util import fill
+
+from pilgram2.util import fill
 
 
 def linear_gradient_mask(size, start=1, end=0, is_horizontal=True):

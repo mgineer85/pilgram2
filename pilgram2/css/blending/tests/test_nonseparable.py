@@ -18,7 +18,8 @@ import pytest
 from PIL import Image, ImageMath
 from PIL.ImageMath import imagemath_convert as _convert
 from pilgram import util
-from pilgram.css.blending.nonseparable import (
+
+from pilgram2.css.blending.nonseparable import (
     _clip_color,
     _max3,
     _min3,

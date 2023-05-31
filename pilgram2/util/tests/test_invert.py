@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import ImageChops
-from pilgram.util import fill, invert
+
+from pilgram2.util import fill, invert
 
 
 def test_invert():

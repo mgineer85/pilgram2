@@ -14,7 +14,8 @@
 
 import numpy as np
 from PIL import Image, ImageChops
-from pilgram.css.blending.alpha import alpha_blend
+
+from pilgram2.css.blending.alpha import alpha_blend
 
 
 def _exclusion(im1, im2):

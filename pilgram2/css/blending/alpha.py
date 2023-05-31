@@ -1,4 +1,3 @@
-
 # Copyright 2019 Akiomi Kamakura
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +14,8 @@
 
 import numpy as np
 from PIL import Image, ImageChops
-from pilgram.util import add, invert, subtract
+
+from pilgram2.util import add, invert, subtract
 
 
 def add3(im1, im2, im3):

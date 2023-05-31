@@ -15,8 +15,9 @@
 import numpy as np
 from PIL import Image
 from pilgram import css, util
-from pilgram.css.blending.alpha import split_alpha
-from pilgram.css.blending.tests.helpers import assert_alpha_support
+
+from pilgram2.css.blending.alpha import split_alpha
+from pilgram2.css.blending.tests.helpers import assert_alpha_support
 
 
 def test_normal():

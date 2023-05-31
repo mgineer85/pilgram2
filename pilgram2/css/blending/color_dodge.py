@@ -15,8 +15,9 @@
 from PIL import Image, ImageMath
 from PIL.ImageMath import imagemath_convert as _convert
 from PIL.ImageMath import imagemath_float as _float
-from pilgram.css.blending.alpha import alpha_blend
-from pilgram.util import invert
+
+from pilgram2.css.blending.alpha import alpha_blend
+from pilgram2.util import invert
 
 
 def _color_dodge_image_math(cb, cs_inv):
@@ -42,9 +43,7 @@ def _color_dodge(im1, im2):
     return Image.merge(
         "RGB",
         [
-            ImageMath.eval(
-                "f(cb, cs_inv)", f=_color_dodge_image_math, cb=cb, cs_inv=cs_inv
-            )
+            ImageMath.eval("f(cb, cs_inv)", f=_color_dodge_image_math, cb=cb, cs_inv=cs_inv)
             for cb, cs_inv in zip(im1.split(), invert(im2).split())
         ],
     )

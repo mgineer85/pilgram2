@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import ImageChops
-from pilgram.css.blending.alpha import alpha_blend
+
+from pilgram2.css.blending.alpha import alpha_blend
 
 
 def _screen(im1, im2):

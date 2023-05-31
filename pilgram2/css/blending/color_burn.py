@@ -14,7 +14,8 @@
 
 from PIL import Image, ImageMath
 from PIL.ImageMath import imagemath_convert as _convert
-from pilgram.css.blending.alpha import alpha_blend
+
+from pilgram2.css.blending.alpha import alpha_blend
 
 
 def _color_burn_image_math(cb, cs):

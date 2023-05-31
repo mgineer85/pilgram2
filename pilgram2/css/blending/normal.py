@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from pilgram.css.blending.alpha import alpha_blend
+from pilgram2.css.blending.alpha import alpha_blend
 
 
 def _normal(im1, im2):

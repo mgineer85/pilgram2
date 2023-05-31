@@ -17,7 +17,8 @@ from functools import reduce
 
 import numpy as np
 from PIL import Image
-from pilgram.util import fill, invert
+
+from pilgram2.util import fill, invert
 
 
 def _prepared_radial_gradient_mask(size, scale=1):

@@ -15,7 +15,8 @@
 import pytest
 from PIL import Image
 from pilgram import util
-from pilgram.css.blending.alpha import alpha_blend, alpha_to_rgb, split_alpha
+
+from pilgram2.css.blending.alpha import alpha_blend, alpha_to_rgb, split_alpha
 
 
 def _normal(cb, cs):
