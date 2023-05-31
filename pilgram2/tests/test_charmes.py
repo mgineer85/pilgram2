@@ -13,7 +13,6 @@
 # limitations under the License.
 
 from PIL import Image
-
 from pilgram import charmes, util
 
 
@@ -23,5 +22,5 @@ def test_charmes():
 
 
 def test_charmes_benchmark(benchmark):
-    with Image.open("examples/mtjimba.jpg") as im:
+    with Image.open("pilgram2/tests/assets/mtjimba.jpg") as im:
         benchmark(charmes, im)

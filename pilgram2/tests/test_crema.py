@@ -13,7 +13,6 @@
 # limitations under the License.
 
 from PIL import Image
-
 from pilgram import crema, util
 
 
@@ -23,5 +22,5 @@ def test_crema():
 
 
 def test_crema_benchmark(benchmark):
-    with Image.open("examples/mtjimba.jpg") as im:
+    with Image.open("pilgram2/tests/assets/mtjimba.jpg") as im:
         benchmark(crema, im)

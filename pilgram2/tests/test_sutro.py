@@ -13,7 +13,6 @@
 # limitations under the License.
 
 from PIL import Image
-
 from pilgram import sutro, util
 
 
@@ -23,5 +22,5 @@ def test_sutro():
 
 
 def test_sutro_benchmark(benchmark):
-    with Image.open("examples/mtjimba.jpg") as im:
+    with Image.open("pilgram2/tests/assets/mtjimba.jpg") as im:
         benchmark(sutro, im)

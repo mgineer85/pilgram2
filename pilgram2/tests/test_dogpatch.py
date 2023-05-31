@@ -13,7 +13,6 @@
 # limitations under the License.
 
 from PIL import Image
-
 from pilgram import dogpatch, util
 
 
@@ -23,5 +22,5 @@ def test_dogpatch():
 
 
 def test_dogpatch_benchmark(benchmark):
-    with Image.open("examples/mtjimba.jpg") as im:
+    with Image.open("pilgram2/tests/assets/mtjimba.jpg") as im:
         benchmark(dogpatch, im)
