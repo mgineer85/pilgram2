@@ -3,15 +3,12 @@ SRC_DIR = pilgram2
 all: test clean build;
 
 lint:
-	poetry run flake8 ${SRC_DIR}
+	poetry run ruff check ${SRC_DIR}
 
 format:
-	poetry run black ${SRC_DIR} && poetry run isort ${SRC_DIR}
+	poetry run ruff --fix ${SRC_DIR}
 
-format-check:
-	poetry run black --check ${SRC_DIR} && poetry run isort -c ${SRC_DIR}
-
-test: lint format-check
+test: lint
 	poetry run pytest --cov-report=term --cov-report=xml:coverage.xml
 
 test-benchmark:
@@ -30,4 +27,4 @@ test-upload: clean build
 upload: clean build
 	poetry run twine upload -s -r pypi dist/*
 
-.PHONY: all lint format format-check test test-benchmark benchmark clean build test-upload upload
+.PHONY: all lint format test test-benchmark benchmark clean build test-upload upload
