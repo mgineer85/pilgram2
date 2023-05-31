@@ -7,9 +7,11 @@
 
 A python library for instagram filters.
 
-![screenshot](screenshots/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/mgrl/pilgram2/v2/screenshots/screenshot.png)
 
 The filter implementations are inspired by [CSSgram](https://una.im/CSSgram/).
+Pilgram2 was forked from [pilgram](https://github.com/akiomik/pilgram).
+Pilgram2 features more filter and supports non-quadratic images.
 
 ## Requirements
 
@@ -27,29 +29,43 @@ pip install pilgram2
 
 ## Usage
 
-Available instagram filters on `pilgram2`:
+39 available instagram filters on `pilgram2`, 14 filters new to pilgram2 compared to pilgram:
 
 - `_1977`
 - `aden`
+- `ashby` (new in pilgram2)
+- `amaro` (new in pilgram2)
 - `brannan`
 - `brooklyn`
+- `charmes` (new in pilgram2)
 - `clarendon`
+- `crema` (new in pilgram2)
+- `dogpatch` (new in pilgram2)
 - `earlybird`
 - `gingham`
+- `ginza` (new in pilgram2)
+- `hefe` (new in pilgram2)
+- `helena` (new in pilgram2)
 - `hudson`
 - `inkwell`
+- `juno` (new in pilgram2)
 - `kelvin`
 - `lark`
 - `lofi`
+- `ludwig` (new in pilgram2)
 - `maven`
 - `mayfair`
 - `moon`
 - `nashville`
 - `perpetua`
+- `poprocket` (new in pilgram2)
 - `reyes`
 - `rise`
+- `sierra` (new in pilgram2)
+- `skyline` (new in pilgram2)
 - `slumber`
 - `stinson`
+- `sutro` (new in pilgram2)
 - `toaster`
 - `valencia`
 - `walden`
