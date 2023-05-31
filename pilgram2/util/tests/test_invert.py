@@ -13,7 +13,6 @@
 # limitations under the License.
 
 from PIL import ImageChops
-
 from pilgram.util import fill, invert
 
 

@@ -17,7 +17,6 @@ from math import floor
 import pytest
 from PIL import Image, ImageMath
 from PIL.ImageMath import imagemath_convert as _convert
-
 from pilgram import util
 from pilgram.css.blending.nonseparable import (
     _clip_color,
@@ -91,7 +90,7 @@ def test_set_lum():
     c1 = "(float(r1), float(g1), float(b1))"
     c2 = "(float(r2), float(g2), float(b2))"
     bands = ImageMath.eval(
-        "set_lum({}, lum({}))".format(c1, c2),
+        f"set_lum({c1}, lum({c2}))",
         set_lum=set_lum,
         lum=lum,
         r1=r1,

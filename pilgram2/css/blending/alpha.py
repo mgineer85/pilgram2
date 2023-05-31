@@ -1,4 +1,3 @@
-# coding:utf-8
 
 # Copyright 2019 Akiomi Kamakura
 #
@@ -16,7 +15,6 @@
 
 import numpy as np
 from PIL import Image, ImageChops
-
 from pilgram.util import add, invert, subtract
 
 

@@ -14,7 +14,6 @@
 
 import numpy as np
 from PIL import Image
-
 from pilgram.util import fill
 
 

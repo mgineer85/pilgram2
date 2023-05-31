@@ -14,7 +14,6 @@
 
 import pytest
 from PIL import ImageChops
-
 from pilgram import util
 
 

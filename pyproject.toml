@@ -1,3 +1,14 @@
+[project]
+name = "pilgram2"
+requires-python = ">=3.4"
+version = "2.0.0"
+description = "library for instagram filters"
+authors = [{ name = "Michael G", email = "me@mgrl.de" },{ name = "Akiomi Kamakura", email = "akiomik@gmail.com" }]
+maintainers = [{ name = "Michael G", email = "me@mgrl.de" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+urls = { repository = "https://github.com/mgrl/pilgram2" }
+
 [tool.poetry]
 name = "pilgram2"
 version = "2.0.0"
@@ -26,3 +37,17 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.isort]
 profile = "black"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+select = [
+  "E",   # pycodestyle
+  "W",   # pycodestyle
+  "F",   # pyflakes
+  "B",   # bugbear
+  "UP",  # pyupgrade
+  "I",   # isort
+]

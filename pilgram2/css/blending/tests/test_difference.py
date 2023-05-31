@@ -13,7 +13,6 @@
 # limitations under the License.
 
 from PIL import ImageChops
-
 from pilgram import css, util
 from pilgram.css.blending.tests.helpers import assert_alpha_support
 

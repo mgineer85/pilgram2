@@ -14,7 +14,6 @@
 
 import numpy as np
 from PIL import Image, ImageChops
-
 from pilgram.css.blending.alpha import alpha_blend
 
 

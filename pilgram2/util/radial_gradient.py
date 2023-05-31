@@ -17,7 +17,6 @@ from functools import reduce
 
 import numpy as np
 from PIL import Image
-
 from pilgram.util import fill, invert
 
 
