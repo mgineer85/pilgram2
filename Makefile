@@ -22,9 +22,9 @@ build:
 	poetry run python setup.py sdist bdist_wheel
 
 test-upload: clean build
-	poetry run twine upload -s -r test dist/*
+	poetry run twine upload -r test dist/*
 
 upload: clean build
-	poetry run twine upload -s -r pypi dist/*
+	poetry run twine upload -r pypi dist/*
 
 .PHONY: all lint format test test-benchmark benchmark clean build test-upload upload
