@@ -1,4 +1,4 @@
-SRC_DIR = pilgram
+SRC_DIR = pilgram2
 
 all: test clean build;
 

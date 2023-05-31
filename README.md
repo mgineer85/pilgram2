@@ -1,10 +1,9 @@
 # pilgram
 
-[![DOI](https://zenodo.org/badge/169348812.svg)](https://zenodo.org/badge/latestdoi/169348812)
-[![PyPI](https://img.shields.io/pypi/v/pilgram.svg)](https://python.org/pypi/pilgram)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pilgram.svg)](https://python.org/pypi/pilgram)
-[![Python CI](https://github.com/akiomik/pilgram/actions/workflows/ci.yml/badge.svg)](https://github.com/akiomik/pilgram/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/akiomik/pilgram/branch/master/graph/badge.svg)](https://codecov.io/gh/akiomik/pilgram)
+[![PyPI](https://img.shields.io/pypi/v/pilgram2.svg)](https://python.org/pypi/pilgram2)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pilgram2.svg)](https://python.org/pypi/pilgram2)
+[![Python CI](https://github.com/mgrl/pilgram2/actions/workflows/ci.yml/badge.svg)](https://github.com/mgrl/pilgram2/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/mgrl/pilgram2/branch/master/graph/badge.svg)](https://codecov.io/gh/mgrl/pilgram2)
 
 A python library for instagram filters.
 
@@ -23,12 +22,13 @@ The filter implementations are inspired by [CSSgram](https://una.im/CSSgram/).
 ```sh
 pip install pillow>=4.1.0 # or pip install pillow-simd
 pip install numpy
-pip install pilgram
+pip install pilgram2
 ```
 
 ## Usage
 
-Available instagram filters on `pilgram`:
+Available instagram filters on `pilgram2`:
+
 - `_1977`
 - `aden`
 - `brannan`
@@ -58,15 +58,16 @@ Available instagram filters on `pilgram`:
 
 ```python
 from PIL import Image
-import pilgram
+import pilgram2
 
 im = Image.open('sample.jpg')
-pilgram.aden(im).save('sample-aden.jpg')
+pilgram2.aden(im).save('sample-aden.jpg')
 ```
 
-Similarly, pilgram provides css filters and blend modes as a by-product.
+Similarly, pilgram2 provides css filters and blend modes as a by-product.
 
-Available css filters on `pilgram.css`:
+Available css filters on `pilgram2.css`:
+
 - `contrast`
 - `grayscale`
 - `hue_rotate`
@@ -75,13 +76,14 @@ Available css filters on `pilgram.css`:
 
 ```python
 from PIL import Image
-import pilgram.css
+import pilgram2.css
 
 im = Image.open('sample.jpg')
-pilgram.css.sepia(im).save('sample-sepia.jpg')
+pilgram2.css.sepia(im).save('sample-sepia.jpg')
 ```
 
-Available blend modes on `pilgram.css.blending`:
+Available blend modes on `pilgram2.css.blending`:
+
 - `color`
 - `color_burn`
 - `color_dodge`
@@ -99,11 +101,11 @@ Available blend modes on `pilgram.css.blending`:
 
 ```python
 from PIL import Image
-import pilgram.css.blending
+import pilgram2.css.blending
 
 backdrop = Image.open('backdrop.jpg')
 source = Image.open('source.jpg')
-pilgram.css.blending.color(backdrop, source).save('blending.jpg')
+pilgram2.css.blending.color(backdrop, source).save('blending.jpg')
 ```
 
 ## Demo

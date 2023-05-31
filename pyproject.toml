@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "pilgram"
-version = "1.2.1"
+name = "pilgram2"
+version = "2.0.0"
 description = "library for instagram filters"
-authors = ["Akiomi Kamakura <akiomik@gmail.com>"]
+authors = ["Michael G <me@mgrl.de>", "Akiomi Kamakura <akiomik@gmail.com>"]
 license = "Apache License 2.0"
 readme = "README.md"
 
