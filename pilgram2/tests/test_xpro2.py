@@ -13,7 +13,6 @@
 # limitations under the License.
 
 from PIL import Image
-
 from pilgram import util, xpro2
 
 
@@ -23,5 +22,5 @@ def test_xpro2():
 
 
 def test_xpro2_benchmark(benchmark):
-    with Image.open("notebooks/mtjimba.jpg") as im:
+    with Image.open("pilgram2/tests/assets/mtjimba.jpg") as im:
         benchmark(xpro2, im)

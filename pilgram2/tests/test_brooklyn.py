@@ -13,7 +13,6 @@
 # limitations under the License.
 
 from PIL import Image
-
 from pilgram import brooklyn, util
 
 
@@ -23,5 +22,5 @@ def test_brooklyn():
 
 
 def test_brooklyn_benchmark(benchmark):
-    with Image.open("notebooks/mtjimba.jpg") as im:
+    with Image.open("pilgram2/tests/assets/mtjimba.jpg") as im:
         benchmark(brooklyn, im)

@@ -13,7 +13,6 @@
 # limitations under the License.
 
 from PIL import Image
-
 from pilgram import kelvin, util
 
 
@@ -23,5 +22,5 @@ def test_kelvin():
 
 
 def test_kelvin_benchmark(benchmark):
-    with Image.open("notebooks/mtjimba.jpg") as im:
+    with Image.open("pilgram2/tests/assets/mtjimba.jpg") as im:
         benchmark(kelvin, im)

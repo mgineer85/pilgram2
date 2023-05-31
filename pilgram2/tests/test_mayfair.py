@@ -13,7 +13,6 @@
 # limitations under the License.
 
 from PIL import Image
-
 from pilgram import mayfair, util
 
 
@@ -23,5 +22,5 @@ def test_mayfair():
 
 
 def test_mayfair_benchmark(benchmark):
-    with Image.open("notebooks/mtjimba.jpg") as im:
+    with Image.open("pilgram2/tests/assets/mtjimba.jpg") as im:
         benchmark(mayfair, im)
