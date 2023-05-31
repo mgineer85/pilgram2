@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import perpetua, util
+
+from pilgram2 import perpetua, util
 
 
 def test_perpetua():

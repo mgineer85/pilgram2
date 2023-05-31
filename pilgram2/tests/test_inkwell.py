@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import inkwell, util
+
+from pilgram2 import inkwell, util
 
 
 def test_inkwell():

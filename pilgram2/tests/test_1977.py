@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import _1977, util
+
+from pilgram2 import _1977, util
 
 
 def test_1977():

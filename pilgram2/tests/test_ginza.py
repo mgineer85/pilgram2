@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import ginza, util
+
+from pilgram2 import ginza, util
 
 
 def test_ginza():

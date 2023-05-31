@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import lofi, util
+
+from pilgram2 import lofi, util
 
 
 def test_lofi():

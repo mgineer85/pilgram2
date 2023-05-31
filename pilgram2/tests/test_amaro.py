@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import amaro, util
+
+from pilgram2 import amaro, util
 
 
 def test_amaro():

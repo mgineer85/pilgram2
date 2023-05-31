@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import sierra, util
+
+from pilgram2 import sierra, util
 
 
 def test_sierra():

@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-from pilgram import util
+from pilgram2 import util
 
 
 def test_radial_gradient_mask_prepared():

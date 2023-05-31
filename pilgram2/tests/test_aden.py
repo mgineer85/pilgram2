@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import aden, util
+
+from pilgram2 import aden, util
 
 
 def test_aden():

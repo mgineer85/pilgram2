@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import toaster, util
+
+from pilgram2 import toaster, util
 
 
 def test_toaster():

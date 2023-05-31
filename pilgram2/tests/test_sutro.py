@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import sutro, util
+
+from pilgram2 import sutro, util
 
 
 def test_sutro():

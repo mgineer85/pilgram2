@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import lark, util
+
+from pilgram2 import lark, util
 
 
 def test_lark():

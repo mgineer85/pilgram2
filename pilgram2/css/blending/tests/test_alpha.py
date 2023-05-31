@@ -14,8 +14,8 @@
 
 import pytest
 from PIL import Image
-from pilgram import util
 
+from pilgram2 import util
 from pilgram2.css.blending.alpha import alpha_blend, alpha_to_rgb, split_alpha
 
 

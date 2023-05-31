@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import css, util
+
+from pilgram2 import css, util
 
 
 def rise(im):

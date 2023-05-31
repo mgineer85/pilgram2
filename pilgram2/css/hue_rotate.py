@@ -14,7 +14,7 @@
 
 import math
 
-from pilgram import util
+from pilgram2 import util
 
 
 def hue_rotate(im, deg=0):

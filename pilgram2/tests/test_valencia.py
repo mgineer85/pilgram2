@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import util, valencia
+
+from pilgram2 import util, valencia
 
 
 def test_valencia():

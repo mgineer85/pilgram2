@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import maven, util
+
+from pilgram2 import maven, util
 
 
 def test_maven():

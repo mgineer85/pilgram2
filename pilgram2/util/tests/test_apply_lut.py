@@ -14,7 +14,8 @@
 
 import pytest
 from PIL import ImageChops
-from pilgram import util
+
+from pilgram2 import util
 
 
 def test_apply_lut_identity():

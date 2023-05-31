@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import nashville, util
+
+from pilgram2 import nashville, util
 
 
 def test_nashville():

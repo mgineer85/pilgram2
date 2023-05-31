@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import hefe, util
+
+from pilgram2 import hefe, util
 
 
 def test_hefe():

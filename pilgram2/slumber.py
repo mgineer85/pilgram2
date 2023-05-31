@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from pilgram import css, util
+from pilgram2 import css, util
 
 
 def slumber(im):

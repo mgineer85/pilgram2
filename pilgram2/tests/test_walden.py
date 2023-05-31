@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import util, walden
+
+from pilgram2 import util, walden
 
 
 def test_walden():

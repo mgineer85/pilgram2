@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import kelvin, util
+
+from pilgram2 import kelvin, util
 
 
 def test_kelvin():

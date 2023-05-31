@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from pilgram import util
+from pilgram2 import util
 
 
 def saturate(im, amount=1):

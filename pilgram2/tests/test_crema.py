@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import crema, util
+
+from pilgram2 import crema, util
 
 
 def test_crema():

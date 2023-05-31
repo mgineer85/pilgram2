@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-from pilgram import css, util
+from pilgram2 import css, util
 
 
 def sutro(im):
@@ -28,9 +28,7 @@ def sutro(im):
 
     cb = util.or_convert(im, "RGB")
 
-    radial_gradient = util.radial_gradient(
-        cb.size, [[0, 0, 0, 0], [0, 0, 0, 0.50]], [0.5, 0.9]
-    )
+    radial_gradient = util.radial_gradient(cb.size, [[0, 0, 0, 0], [0, 0, 0, 0.50]], [0.5, 0.9])
 
     cr = css.blending.darken(cb, radial_gradient)
     cr = css.sepia(cr, 0.4)

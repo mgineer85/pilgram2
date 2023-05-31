@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import dogpatch, util
+
+from pilgram2 import dogpatch, util
 
 
 def test_dogpatch():

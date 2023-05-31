@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import mayfair, util
+
+from pilgram2 import mayfair, util
 
 
 def test_mayfair():

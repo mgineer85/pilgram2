@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-from pilgram import css, util
+from pilgram2 import css, util
 
 
 def helena(im):

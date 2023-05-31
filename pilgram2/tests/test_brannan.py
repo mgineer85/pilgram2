@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import brannan, util
+
+from pilgram2 import brannan, util
 
 
 def test_brannan():

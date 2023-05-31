@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import hudson, util
+
+from pilgram2 import hudson, util
 
 
 def test_hudson():

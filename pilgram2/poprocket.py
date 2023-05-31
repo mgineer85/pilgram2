@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-from pilgram import css, util
+from pilgram2 import css, util
 
 
 def poprocket(im):
@@ -28,9 +28,7 @@ def poprocket(im):
 
     cb = util.or_convert(im, "RGB")
 
-    radial_gradient = util.radial_gradient(
-        cb.size, [[206, 39, 70, 0.75], [0, 0, 0, 0.0]], [0.4, 0.8]
-    )
+    radial_gradient = util.radial_gradient(cb.size, [[206, 39, 70, 0.75], [0, 0, 0, 0.0]], [0.4, 0.8])
 
     cr = css.blending.screen(cb, radial_gradient)
     cr = css.sepia(cr, 0.15)

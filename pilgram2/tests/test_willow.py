@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import util, willow
+
+from pilgram2 import util, willow
 
 
 def test_willow():

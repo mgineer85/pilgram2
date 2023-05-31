@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import stinson, util
+
+from pilgram2 import stinson, util
 
 
 def test_stinson():

@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import reyes, util
+
+from pilgram2 import reyes, util
 
 
 def test_reyes():

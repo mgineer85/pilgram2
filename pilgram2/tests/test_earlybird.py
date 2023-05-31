@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import earlybird, util
+
+from pilgram2 import earlybird, util
 
 
 def test_earlybird():

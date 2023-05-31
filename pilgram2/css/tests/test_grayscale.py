@@ -13,7 +13,8 @@
 # limitations under the License.
 
 import pytest
-from pilgram import css, util
+
+from pilgram2 import css, util
 
 
 def test_grayscale():

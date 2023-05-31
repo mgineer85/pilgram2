@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from pilgram import css, util
+from pilgram2 import css, util
 
 
 def earlybird(im):
@@ -27,9 +27,7 @@ def earlybird(im):
 
     cb = util.or_convert(im, "RGB")
 
-    cs = util.radial_gradient(
-        cb.size, [(208, 186, 142), (54, 3, 9), (29, 2, 16)], [0.2, 0.85, 1]
-    )
+    cs = util.radial_gradient(cb.size, [(208, 186, 142), (54, 3, 9), (29, 2, 16)], [0.2, 0.85, 1])
     cr = css.blending.overlay(cb, cs)
 
     cr = css.contrast(cr, 0.9)

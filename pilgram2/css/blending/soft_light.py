@@ -17,8 +17,8 @@ import math
 
 import numpy as np
 from PIL import Image, ImageChops
-from pilgram import util
 
+from pilgram2 import util
 from pilgram2.css.blending.alpha import alpha_blend
 
 

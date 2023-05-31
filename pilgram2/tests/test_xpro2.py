@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import util, xpro2
+
+from pilgram2 import util, xpro2
 
 
 def test_xpro2():

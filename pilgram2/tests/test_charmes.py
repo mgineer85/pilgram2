@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import charmes, util
+
+from pilgram2 import charmes, util
 
 
 def test_charmes():

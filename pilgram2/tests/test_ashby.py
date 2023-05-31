@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import ashby, util
+
+from pilgram2 import ashby, util
 
 
 def test_ashby():

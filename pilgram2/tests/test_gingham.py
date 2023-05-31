@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import gingham, util
+
+from pilgram2 import gingham, util
 
 
 def test_gingham():

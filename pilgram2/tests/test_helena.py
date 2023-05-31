@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import helena, util
+
+from pilgram2 import helena, util
 
 
 def test_helena():

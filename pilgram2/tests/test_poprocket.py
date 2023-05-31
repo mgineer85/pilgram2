@@ -13,7 +13,8 @@
 # limitations under the License.
 
 from PIL import Image
-from pilgram import poprocket, util
+
+from pilgram2 import poprocket, util
 
 
 def test_poprocket():

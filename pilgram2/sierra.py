@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-from pilgram import css, util
+from pilgram2 import css, util
 
 
 def sierra(im):
@@ -28,9 +28,7 @@ def sierra(im):
 
     cb = util.or_convert(im, "RGB")
 
-    radial_gradient = util.radial_gradient(
-        cb.size, [[128, 78, 15, 0.5], [0, 0, 0, 0.65]]
-    )
+    radial_gradient = util.radial_gradient(cb.size, [[128, 78, 15, 0.5], [0, 0, 0, 0.65]])
 
     cr = css.blending.screen(cb, radial_gradient)
     cr = css.sepia(cr, 0.25)
