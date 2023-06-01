@@ -7,7 +7,6 @@ authors = [{ name = "Michael G", email = "me@mgrl.de" },{ name = "Akiomi Kamakur
 maintainers = [{ name = "Michael G", email = "me@mgrl.de" }]
 readme = "README.md"
 license = { file = "LICENSE" }
-urls = { repository = "https://github.com/mgrl/pilgram2" }
 classifiers = [
   "License :: OSI Approved :: Apache Software License",
   "Operating System :: OS Independent",
@@ -30,6 +29,10 @@ keywords = [
   "data-augmentation"
 ]
 
+[project.urls]
+Homepage = "https://github.com/mgrl/pilgram2"
+Repository = "https://github.com/mgrl/pilgram2"
+"Bug Tracker" = "https://github.com/mgrl/pilgram2/issues"
 
 [tool.poetry]
 name = "pilgram2"
