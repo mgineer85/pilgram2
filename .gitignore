@@ -105,3 +105,6 @@ venv.bak/
 
 # pytest-benchmark
 .benchmarks
+
+# poetry credentials
+poetry.toml
