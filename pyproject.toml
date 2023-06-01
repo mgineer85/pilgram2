@@ -1,7 +1,7 @@
 [project]
 name = "pilgram2"
 requires-python = ">=3.4"
-version = "2.0.0"
+version = "2.0.1"
 description = "library for instagram filters"
 authors = [{ name = "Michael G", email = "me@mgrl.de" },{ name = "Akiomi Kamakura", email = "akiomik@gmail.com" }]
 maintainers = [{ name = "Michael G", email = "me@mgrl.de" }]
@@ -37,7 +37,7 @@ keywords = [
 
 [tool.poetry]
 name = "pilgram2"
-version = "2.0.0"
+version = "2.0.1"
 description = "library for instagram filters"
 authors = ["Michael G <me@mgrl.de>", "Akiomi Kamakura <akiomik@gmail.com>"]
 license = "Apache License 2.0"
