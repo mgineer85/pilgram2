@@ -7,7 +7,7 @@
 
 A python library for instagram filters.
 
-![screenshot](https://raw.githubusercontent.com/mgrl/pilgram2/v2/screenshots/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/mgrl/pilgram2/main/screenshots/screenshot.png)
 
 The filter implementations are inspired by [CSSgram](https://una.im/CSSgram/).
 Pilgram2 was forked from [pilgram](https://github.com/akiomik/pilgram).
@@ -124,14 +124,9 @@ source = Image.open('source.jpg')
 pilgram2.css.blending.color(backdrop, source).save('blending.jpg')
 ```
 
-## Performance
-
-![filter performance comparison](screenshots/filter-performance-comparison.png)
-
 ## Test
 
 ```sh
 pipenv install --dev
 make test     # pytest
-make test-tox # pytest with tox
 ```
