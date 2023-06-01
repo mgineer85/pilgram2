@@ -16,15 +16,15 @@ test-benchmark:
 
 clean:
 	find . -type f -name "*.pyc" -delete
-	rm -rf dist build *.egg-info
+	rm -rf dist
 
 build:
-	poetry run python setup.py sdist bdist_wheel
+	poetry build
 
 test-upload: clean build
-	poetry run twine upload -r test dist/*
+	poetry publish -r testpypi
 
 upload: clean build
-	poetry run twine upload -r pypi dist/*
+	poetry publish -r pypi
 
 .PHONY: all lint format test test-benchmark benchmark clean build test-upload upload

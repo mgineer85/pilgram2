@@ -8,6 +8,32 @@ maintainers = [{ name = "Michael G", email = "me@mgrl.de" }]
 readme = "README.md"
 license = { file = "LICENSE" }
 urls = { repository = "https://github.com/mgrl/pilgram2" }
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.4",
+  "Programming Language :: Python :: 3.5",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Multimedia :: Graphics",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+keywords = [
+  "pillow",
+  "instagram",
+  "instagram-filters",
+  "css-filters",
+  "image-blending",
+  "blend-modes",
+  "image-processing",
+  "data-augmentation"
+]
+
 
 [tool.poetry]
 name = "pilgram2"
@@ -47,3 +73,12 @@ select = [
   "UP",  # pyupgrade
   "I",   # isort
 ]
+
+[tool.pytest.ini_options]
+addopts = "-v --cov=pilgram2 --benchmark-skip"
+
+[tool.coverage.run]
+omit = ["*/tests/*"]
+
+[tool.coverage.report]
+show_missing = true
