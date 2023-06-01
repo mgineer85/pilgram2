@@ -15,14 +15,14 @@ Pilgram2 features more filter and supports non-quadratic images.
 
 ## Requirements
 
-- Python >= 3.7
+- Python >= 3.8
 - [Pillow](https://pillow.readthedocs.io/en/stable/) or [pillow-simd](https://github.com/uploadcare/pillow-simd)
 - [NumPy](https://numpy.org)
 
 ## Install
 
 ```sh
-pip install pillow>=4.1.0 # or pip install pillow-simd
+pip install pillow # or pip install pillow-simd
 pip install numpy
 pip install pilgram2
 ```
