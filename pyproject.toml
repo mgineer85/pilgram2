@@ -3,7 +3,10 @@ name = "pilgram2"
 requires-python = ">=3.8"
 version = "2.0.2"
 description = "library for instagram filters"
-authors = [{ name = "Michael G", email = "me@mgrl.de" },{ name = "Akiomi Kamakura", email = "akiomik@gmail.com" }]
+authors = [
+  { name = "Michael G", email = "me@mgrl.de" },
+  { name = "Akiomi Kamakura", email = "akiomik@gmail.com" },
+]
 maintainers = [{ name = "Michael G", email = "me@mgrl.de" }]
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -15,8 +18,9 @@ classifiers = [
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
   "Topic :: Multimedia :: Graphics",
-  "Topic :: Software Development :: Libraries :: Python Modules"
+  "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 keywords = [
   "pillow",
@@ -26,10 +30,10 @@ keywords = [
   "image-blending",
   "blend-modes",
   "image-processing",
-  "data-augmentation"
+  "data-augmentation",
 ]
 
-[project.urls]
+[tool.poetry.urls]
 Homepage = "https://github.com/mgrl/pilgram2"
 Repository = "https://github.com/mgrl/pilgram2"
 "Bug Tracker" = "https://github.com/mgrl/pilgram2/issues"
@@ -65,12 +69,12 @@ line-length = 120
 [tool.ruff]
 line-length = 120
 select = [
-  "E",   # pycodestyle
-  "W",   # pycodestyle
-  "F",   # pyflakes
-  "B",   # bugbear
-  "UP",  # pyupgrade
-  "I",   # isort
+  "E",  # pycodestyle
+  "W",  # pycodestyle
+  "F",  # pyflakes
+  "B",  # bugbear
+  "UP", # pyupgrade
+  "I",  # isort
 ]
 
 [tool.pytest.ini_options]
