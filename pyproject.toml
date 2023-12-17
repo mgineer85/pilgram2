@@ -1,7 +1,7 @@
 [project]
 name = "pilgram2"
 requires-python = ">=3.9,<3.13"
-version = "2.0.3"
+version = "2.0.4"
 description = "library for instagram filters"
 authors = [
   { name = "Michael G", email = "me@mgrl.de" },
@@ -39,11 +39,32 @@ Repository = "https://github.com/mgrl/pilgram2"
 
 [tool.poetry]
 name = "pilgram2"
-version = "2.0.3"
+version = "2.0.4"
 description = "library for instagram filters"
 authors = ["Michael G <me@mgrl.de>", "Akiomi Kamakura <akiomik@gmail.com>"]
 license = "Apache License 2.0"
 readme = "README.md"
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Multimedia :: Graphics",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = [
+  "pillow",
+  "instagram",
+  "instagram-filters",
+  "css-filters",
+  "image-blending",
+  "blend-modes",
+  "image-processing",
+  "data-augmentation",
+]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.13"
