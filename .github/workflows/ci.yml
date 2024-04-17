@@ -10,18 +10,27 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: true
       matrix:
         python-version: ["3.9", "3.10", "3.11", "3.12"]
     name: Python ${{ matrix.python-version }}
-    env:
-      PIPENV_VERBOSITY: -1
+    if: ${{ github.repository_owner == 'mgineer85' }}
     steps:
-      - uses: actions/checkout@v3
-      - run: pipx install poetry
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          cache: poetry
-      - run: poetry install
-      - run: make test
-      - uses: codecov/codecov-action@v3
+      - name: install pdm
+        run: |
+          pipx install pdm # on hosted pipx is installed
+          PDM_PREFER_BINARY=gphoto2 pdm install
+      - name: Run pytest
+        run: |
+          pdm run test
+      # - run: poetry install
+      # - run: make test
+      - name: Upload to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
