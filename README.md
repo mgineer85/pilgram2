@@ -15,7 +15,7 @@ Pilgram2 features more filter and supports non-quadratic images.
 
 ## Requirements
 
-- Python >= 3.8
+- Python >= 3.9
 - [Pillow](https://pillow.readthedocs.io/en/stable/) or [pillow-simd](https://github.com/uploadcare/pillow-simd)
 - [NumPy](https://numpy.org)
 
