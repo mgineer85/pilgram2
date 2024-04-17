@@ -1,4 +1,4 @@
-name: Python CI
+name: pytest
 
 on:
   push:
@@ -24,12 +24,12 @@ jobs:
       - name: install pdm
         run: |
           pipx install pdm # on hosted pipx is installed
-          PDM_PREFER_BINARY=gphoto2 pdm install
+      - name: install pilgram2
+        run: |
+          pdm install
       - name: Run pytest
         run: |
           pdm run test
-      # - run: poetry install
-      # - run: make test
       - name: Upload to Codecov
         uses: codecov/codecov-action@v4
         with:
