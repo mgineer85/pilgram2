@@ -2,12 +2,12 @@
 
 [![PyPI](https://img.shields.io/pypi/v/pilgram2.svg)](https://python.org/pypi/pilgram2)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pilgram2.svg)](https://python.org/pypi/pilgram2)
-[![Python CI](https://github.com/mgrl/pilgram2/actions/workflows/ci.yml/badge.svg)](https://github.com/mgrl/pilgram2/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/mgrl/pilgram2/branch/main/graph/badge.svg)](https://codecov.io/gh/mgrl/pilgram2)
+[![Python CI](https://github.com/mgineer85/pilgram2/actions/workflows/ci.yml/badge.svg)](https://github.com/mgineer85/pilgram2/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/mgineer85/pilgram2/branch/main/graph/badge.svg)](https://codecov.io/gh/mgineer85/pilgram2)
 
 A python library for instagram filters.
 
-![screenshot](https://raw.githubusercontent.com/mgrl/pilgram2/main/screenshots/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/mgineer85/pilgram2/main/screenshots/screenshot.png)
 
 The filter implementations are inspired by [CSSgram](https://una.im/CSSgram/).
 Pilgram2 was forked from [pilgram](https://github.com/akiomik/pilgram).
