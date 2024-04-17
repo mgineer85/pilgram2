@@ -2,7 +2,13 @@ name: Publish 🐍 📦 to PyPI and TestPyPI
 
 on:
   push:
-    branches: [main, upgrade-packaging]
+    branches: [main]
+    tags:
+      - "**"
+  label:
+    types:
+      - created
+      - edited
 
 jobs:
   pypi-publish:
