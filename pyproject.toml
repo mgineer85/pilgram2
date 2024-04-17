@@ -1,7 +1,7 @@
 [project]
 name = "pilgram2"
 requires-python = ">=3.9,<3.13"
-version = "2.0.4"
+version = "2.0.5"
 description = "library for instagram filters"
 authors = [
   { name = "Michael G", email = "me@mgrl.de" },
