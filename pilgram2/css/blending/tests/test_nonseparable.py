@@ -34,7 +34,13 @@ from pilgram2.css.blending.nonseparable import (
 def test_min3():
     im = util.fill((1, 1), [0, 128, 255])
     r, g, b = im.split()
-    im_min = ImageMath.eval('convert(min3((r, g, b)), "L")', min3=_min3, r=r, g=g, b=b)
+    im_min = ImageMath.unsafe_eval(
+        'convert(min3((r, g, b)), "L")',
+        min3=_min3,
+        r=r,
+        g=g,
+        b=b,
+    )
 
     assert list(im_min.getdata()) == [0]
 
@@ -42,7 +48,13 @@ def test_min3():
 def test_max3():
     im = util.fill((1, 1), [0, 128, 255])
     r, g, b = im.split()
-    im_max = ImageMath.eval('convert(max3((r, g, b)), "L")', max3=_max3, r=r, g=g, b=b)
+    im_max = ImageMath.unsafe_eval(
+        'convert(max3((r, g, b)), "L")',
+        max3=_max3,
+        r=r,
+        g=g,
+        b=b,
+    )
 
     assert list(im_max.getdata()) == [255]
 
@@ -50,7 +62,7 @@ def test_max3():
 def test_clip_color():
     im = util.fill((1, 1), [0, 128, 255])
     r, g, b = im.split()
-    bands = ImageMath.eval(
+    bands = ImageMath.unsafe_eval(
         "clip_color((float(r - 64), float(g), float(b + 64)))",
         clip_color=_clip_color,
         r=r,
@@ -69,7 +81,13 @@ def test_clip_color():
 def test_lum():
     im = util.fill((1, 1), [0, 128, 255])
     r, g, b = im.split()
-    im_f = ImageMath.eval("lum((float(r), float(g), float(b)))", lum=lum, r=r, g=g, b=b)
+    im_f = ImageMath.unsafe_eval(
+        "lum((float(r), float(g), float(b)))",
+        lum=lum,
+        r=r,
+        g=g,
+        b=b,
+    )
     im_l = im_f.convert("L")
 
     assert list(im_f.getdata()) == [pytest.approx(103.57, 1e-6)]
@@ -90,7 +108,7 @@ def test_set_lum():
     r2, g2, b2 = im2.split()
     c1 = "(float(r1), float(g1), float(b1))"
     c2 = "(float(r2), float(g2), float(b2))"
-    bands = ImageMath.eval(
+    bands = ImageMath.unsafe_eval(
         f"set_lum({c1}, lum({c2}))",
         set_lum=set_lum,
         lum=lum,
@@ -117,7 +135,13 @@ def test_set_lum():
 def test_sat():
     im = util.fill((1, 1), [80, 128, 200])
     r, g, b = im.split()
-    im_sat = ImageMath.eval('convert(sat((r, g, b)), "L")', sat=sat, r=r, g=g, b=b)
+    im_sat = ImageMath.unsafe_eval(
+        'convert(sat((r, g, b)), "L")',
+        sat=sat,
+        r=r,
+        g=g,
+        b=b,
+    )
 
     assert list(im_sat.getdata()) == [120]
 
@@ -127,7 +151,7 @@ def test_set_sat_cmax_gt_cmin():
     im2 = util.fill((1, 1), [64, 96, 128])  # sat = 64
     r1, g1, b1 = im1.split()
     r2, g2, b2 = im2.split()
-    bands = ImageMath.eval(
+    bands = ImageMath.unsafe_eval(
         "set_sat((r1, g1, b1), sat((r2, g2, b2)))",
         set_sat=set_sat,
         sat=sat,
@@ -152,7 +176,7 @@ def test_set_sat_cmax_eq_cmid_gt_cmin():
     im2 = util.fill((1, 1), [64, 96, 128])  # sat = 64
     r1, g1, b1 = im1.split()
     r2, g2, b2 = im2.split()
-    bands = ImageMath.eval(
+    bands = ImageMath.unsafe_eval(
         "set_sat((r1, g1, b1), sat((r2, g2, b2)))",
         set_sat=set_sat,
         sat=sat,
@@ -173,7 +197,7 @@ def test_set_sat_cmax_eq_cmin():
     im2 = util.fill((1, 1), [64, 96, 128])  # sat = 64
     r1, g1, b1 = im1.split()
     r2, g2, b2 = im2.split()
-    bands = ImageMath.eval(
+    bands = ImageMath.unsafe_eval(
         "set_sat((r1, g1, b1), sat((r2, g2, b2)))",
         set_sat=set_sat,
         sat=sat,

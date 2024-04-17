@@ -44,7 +44,7 @@ def _color(im1, im2):
     lum_cb = lum_im(im1)  # Lum(Cb)
     lum_cs = lum_im(im2)  # Lum(C) in SetLum
 
-    bands = ImageMath.eval(
+    bands = ImageMath.unsafe_eval(
         "f((r, g, b), lum_cb, lum_cs)",
         f=_color_image_math,
         r=r,

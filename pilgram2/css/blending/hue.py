@@ -44,7 +44,7 @@ def _hue(im1, im2):
     r2, g2, b2 = im2.split()  # Cs
     lum_cb = lum_im(im1)  # Lum(Cb)
 
-    bands = ImageMath.eval(
+    bands = ImageMath.unsafe_eval(
         "f((r1, g1, b1), (r2, g2, b2), lum_cb)",
         f=_hue_image_math,
         r1=r1,

@@ -43,7 +43,12 @@ def _color_dodge(im1, im2):
     return Image.merge(
         "RGB",
         [
-            ImageMath.eval("f(cb, cs_inv)", f=_color_dodge_image_math, cb=cb, cs_inv=cs_inv)
+            ImageMath.unsafe_eval(
+                "f(cb, cs_inv)",
+                f=_color_dodge_image_math,
+                cb=cb,
+                cs_inv=cs_inv,
+            )
             for cb, cs_inv in zip(im1.split(), invert(im2).split())
         ],
     )

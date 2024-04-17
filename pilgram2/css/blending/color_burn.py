@@ -38,7 +38,12 @@ def _color_burn(im1, im2):
     return Image.merge(
         "RGB",
         [
-            ImageMath.eval("f(cb, cs)", f=_color_burn_image_math, cb=cb, cs=cs)
+            ImageMath.unsafe_eval(
+                "f(cb, cs)",
+                f=_color_burn_image_math,
+                cb=cb,
+                cs=cs,
+            )
             for cb, cs in zip(im1.split(), im2.split())
         ],
     )
