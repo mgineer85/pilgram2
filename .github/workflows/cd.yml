@@ -9,9 +9,9 @@ jobs:
     name: Upload release to PyPI
     runs-on: ubuntu-latest
     if: ${{ github.repository_owner == 'mgineer85' && github.triggering_actor != 'dependabot[bot]' }}
-    environment:
-      name: pypi
-      url: https://pypi.org/p/pilgram2
+    # environment:
+    #   name: pypi
+    #   url: https://pypi.org/p/pilgram2
     permissions:
       id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
