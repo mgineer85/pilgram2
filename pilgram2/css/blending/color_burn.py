@@ -44,7 +44,7 @@ def _color_burn(im1, im2):
                 cb=cb,
                 cs=cs,
             )
-            for cb, cs in zip(im1.split(), im2.split())
+            for cb, cs in zip(im1.split(), im2.split(), strict=False)
         ],
     )
 

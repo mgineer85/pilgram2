@@ -49,7 +49,7 @@ def _color_dodge(im1, im2):
                 cb=cb,
                 cs_inv=cs_inv,
             )
-            for cb, cs_inv in zip(im1.split(), invert(im2).split())
+            for cb, cs_inv in zip(im1.split(), invert(im2).split(), strict=False)
         ],
     )
 
