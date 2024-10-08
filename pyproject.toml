@@ -1,23 +1,23 @@
 [project]
 name = "pilgram2"
-requires-python = ">=3.9,<3.13"
-version = "2.0.5"
+requires-python = ">=3.10,<3.14"
+version = "2.0.6"
 description = "library for instagram filters"
 authors = [
-  { name = "Michael G", email = "me@mgrl.de" },
+  { name = "Michael G", email = "me@mgineer85.de" },
   { name = "Akiomi Kamakura", email = "akiomik@gmail.com" },
 ]
-maintainers = [{ name = "Michael G", email = "me@mgrl.de" }]
+maintainers = [{ name = "Michael G", email = "me@mgineer85.de" }]
 readme = "README.md"
 license = { file = "LICENSE" }
 classifiers = [
   "License :: OSI Approved :: Apache Software License",
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
   "Topic :: Multimedia :: Graphics",
   "Topic :: Software Development :: Libraries :: Python Modules",
 ]
