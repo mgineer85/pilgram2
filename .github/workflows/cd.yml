@@ -15,9 +15,9 @@ jobs:
     name: Upload release to PyPI
     runs-on: ubuntu-latest
     if: ${{ github.repository_owner == 'mgineer85' && github.triggering_actor != 'dependabot[bot]' }}
-    # environment:
-    #   name: pypi
-    #   url: https://pypi.org/p/pilgram2
+    environment:
+      name: pypi
+      url: https://pypi.org/p/pilgram2
     permissions:
       id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
@@ -30,13 +30,10 @@ jobs:
 
       # publish test pypi
       - name: Publish distribution 📦 to Test PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          repository-url: https://test.pypi.org/legacy/
-          skip-existing: true
+        run: pdm publish --no-build --repository https://test.pypi.org/legacy/ --skip-existing
 
       # publish pypi if there is a tag with commit
       - name: Publish distribution 📦 to PyPI
         if: startsWith(github.ref, 'refs/tags')
-        uses: pypa/gh-action-pypi-publish@release/v1
+        run: pdm publish --no-build
 
