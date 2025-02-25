@@ -13,7 +13,6 @@
 # limitations under the License.
 
 from pilgram2._1977 import _1977
-from pilgram2._version import __version__
 from pilgram2.aden import aden
 from pilgram2.amaro import amaro
 from pilgram2.ashby import ashby
@@ -55,7 +54,6 @@ from pilgram2.willow import willow
 from pilgram2.xpro2 import xpro2
 
 __all__ = [
-    "__version__",
     "_1977",
     "aden",
     "amaro",
