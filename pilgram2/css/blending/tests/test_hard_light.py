@@ -40,7 +40,7 @@ def test_hard_light():
     ]
     expected = [pytest.approx(c, abs=1) for c in expected]
 
-    assert list(hard_light.getdata()) == expected  # almost eq
+    assert list(iter(hard_light.getdata())) == expected  # almost eq
 
 
 def test_hard_light_alpha_support(mocker):

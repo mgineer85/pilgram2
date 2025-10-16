@@ -18,7 +18,7 @@ from PIL import Image
 from pilgram2.util import fill
 
 
-def linear_gradient_mask(size, start=1, end=0, is_horizontal=True):
+def linear_gradient_mask(size: tuple[int, int], start: float = 1, end: float = 0, is_horizontal: bool = True) -> Image.Image:
     """Creates mask image for linear gradient image.
 
     Arguments:

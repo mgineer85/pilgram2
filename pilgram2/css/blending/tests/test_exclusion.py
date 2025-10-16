@@ -40,7 +40,7 @@ def test_exclusion():
     ]
     expected = [pytest.approx(c, abs=1) for c in expected]
 
-    assert list(exclusion.getdata()) == expected  # almost eq
+    assert list(iter(exclusion.getdata())) == expected  # almost eq
 
 
 def test_exclusion_alpha_support(mocker):

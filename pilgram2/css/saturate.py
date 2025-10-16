@@ -12,10 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from PIL.Image import Image
+
 from pilgram2 import util
 
 
-def saturate(im, amount=1):
+def saturate(im: Image, amount: float = 1) -> Image:
     """Saturates image.
 
     A saturate operation is equivalent to the following matrix operation:
@@ -43,7 +45,7 @@ def saturate(im, amount=1):
 
     assert amount >= 0
 
-    matrix = [
+    matrix = (
         0.213 + 0.787 * amount,
         0.715 - 0.715 * amount,
         0.072 - 0.072 * amount,
@@ -56,7 +58,7 @@ def saturate(im, amount=1):
         0.715 - 0.715 * amount,
         0.072 + 0.928 * amount,
         0,
-    ]
+    )
 
     saturated = util.or_convert(im, "RGB").convert("RGB", matrix)
     return util.or_convert(saturated, im.mode)

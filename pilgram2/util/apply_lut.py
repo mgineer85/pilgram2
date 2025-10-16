@@ -13,7 +13,10 @@
 # limitations under the License.
 
 
-def apply_lut(im, lut):
+from PIL.Image import Image
+
+
+def apply_lut(im: Image, lut: list[int] | list[float]) -> Image:
     """Apply LUT to an image.
 
     Arguments:

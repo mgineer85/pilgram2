@@ -12,8 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from PIL.Image import Image
 
-def or_convert(im, mode):
+
+def or_convert(im: Image, mode: str) -> Image:
     """Converts image to mode if necessary
 
     Arguments:

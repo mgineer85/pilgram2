@@ -40,7 +40,7 @@ def test_color_burn():
     ]
     expected = [pytest.approx(c, abs=1) for c in expected]
 
-    assert list(color_burn.getdata()) == expected  # almost eq
+    assert list(iter(color_burn.getdata())) == expected  # almost eq
 
 
 def test_color_burn_alpha_support(mocker):

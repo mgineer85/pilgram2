@@ -12,10 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from PIL.Image import Image
+
 from pilgram2 import util
 
 
-def grayscale(im, amount=1):
+def grayscale(im: Image, amount: float = 1) -> Image:
     """Converts image to grayscale.
 
     A grayscale operation is equivalent to the following matrix operation:
@@ -44,7 +46,7 @@ def grayscale(im, amount=1):
     assert amount >= 0
 
     g = 1 - min(amount, 1)
-    matrix = [
+    matrix = (
         0.2126 + 0.7874 * g,
         0.7152 - 0.7152 * g,
         0.0722 - 0.0722 * g,
@@ -57,7 +59,7 @@ def grayscale(im, amount=1):
         0.7152 - 0.7152 * g,
         0.0722 + 0.9278 * g,
         0,
-    ]
+    )
 
     grayscaled = util.or_convert(im, "RGB").convert("RGB", matrix)
     return util.or_convert(grayscaled, im.mode)

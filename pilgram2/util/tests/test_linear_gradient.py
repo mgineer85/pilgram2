@@ -22,7 +22,7 @@ def test_linear_gradient_mask_start_end():
     end = 200 / 255
     mask = util.linear_gradient_mask((w, h), start=start, end=end)
 
-    assert list(mask.getdata()) == [100, 133, 166, 200] * h
+    assert list(iter(mask.getdata())) == [100, 133, 166, 200] * h
     assert mask.size == (w, h)
     assert mask.mode == "L"
 
@@ -35,7 +35,7 @@ def test_linear_gradient_mask_start_end_vertical():
 
     expected = [100] * w + [133] * w + [166] * w + [200] * w
 
-    assert list(mask.getdata()) == expected
+    assert list(iter(mask.getdata())) == expected
     assert mask.size == (w, h)
     assert mask.mode == "L"
 
@@ -64,7 +64,7 @@ def test_linear_gradient():
         (0, 0, 255),
     ]
 
-    assert list(gradient.getdata()) == expected_data
+    assert list(iter(gradient.getdata())) == expected_data
     assert gradient.size == (w, h)
     assert gradient.mode == "RGB"
 
@@ -93,6 +93,6 @@ def test_linear_gradient_vertical():
         (0, 0, 255),
     ]
 
-    assert list(gradient.getdata()) == expected_data
+    assert list(iter(gradient.getdata())) == expected_data
     assert gradient.size == (w, h)
     assert gradient.mode == "RGB"

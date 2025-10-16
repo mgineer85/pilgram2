@@ -21,7 +21,7 @@ def test_contrast():
     im = util.fill((4, 4), [174, 56, 3])
     contrasted_im = css.contrast(im)
 
-    assert list(contrasted_im.getdata()) == list(im.getdata())
+    assert list(iter(contrasted_im.getdata())) == list(iter(im.getdata()))
     assert contrasted_im.size == im.size
     assert contrasted_im.mode == im.mode
 
@@ -31,7 +31,7 @@ def test_contrast_1():
     contrasted_im = css.contrast(im, 1)
     contrasted_im2 = css.contrast(im)
 
-    assert list(contrasted_im.getdata()) == list(contrasted_im2.getdata())
+    assert list(iter(contrasted_im.getdata())) == list(iter(contrasted_im2.getdata()))
     assert contrasted_im.size == im.size
     assert contrasted_im.mode == im.mode
 
@@ -41,7 +41,7 @@ def test_contrast_greater_than_1():
     contrasted_im = css.contrast(im, 2)
     contrasted_im2 = css.contrast(im, 1)
 
-    assert list(contrasted_im.getdata()) != list(contrasted_im2.getdata())
+    assert list(iter(contrasted_im.getdata())) != list(iter(contrasted_im2.getdata()))
     assert contrasted_im.size == im.size
     assert contrasted_im.mode == im.mode
 
@@ -51,7 +51,7 @@ def test_contrast_0():
     im2 = util.fill((4, 4), [128] * 3)
     contrasted_im = css.contrast(im, 0)
 
-    assert list(contrasted_im.getdata()) == list(im2.getdata())
+    assert list(iter(contrasted_im.getdata())) == list(iter(im2.getdata()))
     assert contrasted_im.size == im.size
     assert contrasted_im.mode == im.mode
 
@@ -69,6 +69,6 @@ def test_contrast_hsv():
     contrasted_im2 = css.contrast(im2)
     contrasted_im2_rgb = contrasted_im2.convert("RGB")
 
-    assert list(contrasted_im.getdata()) == list(contrasted_im2_rgb.getdata())
+    assert list(iter(contrasted_im.getdata())) == list(iter(contrasted_im2_rgb.getdata()))
     assert contrasted_im2.size == im2.size
     assert contrasted_im2.mode == im2.mode

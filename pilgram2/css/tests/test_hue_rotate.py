@@ -19,7 +19,7 @@ def test_hue_rotate():
     im = util.fill((4, 4), [174, 56, 3])
     hue_rotated_im = css.hue_rotate(im)
 
-    assert list(hue_rotated_im.getdata()) == list(im.getdata())
+    assert list(iter(hue_rotated_im.getdata())) == list(iter(im.getdata()))
     assert hue_rotated_im.size == im.size
     assert hue_rotated_im.mode == im.mode
 
@@ -29,7 +29,7 @@ def test_hue_rotate_0():
     hue_rotated_im = css.hue_rotate(im)
     hue_rotated_im2 = css.hue_rotate(im, 0)
 
-    assert list(hue_rotated_im.getdata()) == list(hue_rotated_im2.getdata())
+    assert list(iter(hue_rotated_im.getdata())) == list(iter(hue_rotated_im2.getdata()))
     assert hue_rotated_im.size == im.size
     assert hue_rotated_im.mode == im.mode
 
@@ -39,7 +39,7 @@ def test_hue_rotate_360():
     hue_rotated_im = css.hue_rotate(im)
     hue_rotated_im2 = css.hue_rotate(im, 360)
 
-    assert list(hue_rotated_im.getdata()) == list(hue_rotated_im2.getdata())
+    assert list(iter(hue_rotated_im.getdata())) == list(iter(hue_rotated_im2.getdata()))
     assert hue_rotated_im.size == im.size
     assert hue_rotated_im.mode == im.mode
 
@@ -49,7 +49,7 @@ def test_hue_rotate_greater_than_0():
     hue_rotated_im = css.hue_rotate(im, 42)
     hue_rotated_im2 = css.hue_rotate(im)
 
-    assert list(hue_rotated_im.getdata()) != list(hue_rotated_im2.getdata())
+    assert list(iter(hue_rotated_im.getdata())) != list(iter(hue_rotated_im2.getdata()))
     assert hue_rotated_im.size == im.size
     assert hue_rotated_im.mode == im.mode
 
@@ -59,7 +59,7 @@ def test_hue_rotate_less_than_0():
     hue_rotated_im = css.hue_rotate(im, -42)
     hue_rotated_im2 = css.hue_rotate(im)
 
-    assert list(hue_rotated_im.getdata()) != list(hue_rotated_im2.getdata())
+    assert list(iter(hue_rotated_im.getdata())) != list(iter(hue_rotated_im2.getdata()))
     assert hue_rotated_im.size == im.size
     assert hue_rotated_im.mode == im.mode
 
@@ -71,8 +71,8 @@ def test_hue_rotate_hsv():
     hue_rotated_im2 = css.hue_rotate(im2)
     hue_rotated_im2_rgb = hue_rotated_im2.convert("RGB")
 
-    hue_rotated_im_data = list(hue_rotated_im.getdata())
-    hue_rotated_im2_rgb_data = list(hue_rotated_im2_rgb.getdata())
+    hue_rotated_im_data = list(iter(hue_rotated_im.getdata()))
+    hue_rotated_im2_rgb_data = list(iter(hue_rotated_im2_rgb.getdata()))
 
     assert hue_rotated_im_data == hue_rotated_im2_rgb_data
     assert hue_rotated_im2.size == im2.size

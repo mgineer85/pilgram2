@@ -15,7 +15,7 @@
 from PIL import Image
 
 
-def fill(size, color):
+def fill(size: tuple[int, int], color: list[float]) -> Image.Image:
     """Fills new image with the color.
 
     Arguments:

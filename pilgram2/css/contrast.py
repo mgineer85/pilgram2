@@ -12,8 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from PIL.Image import Image
 
-def contrast(im, amount=1):
+
+def contrast(im: Image, amount: float = 1) -> Image:
     """Adjusts the contrast.
 
     A contrast operation is equivalent to the following matrix operation:
@@ -41,4 +43,7 @@ def contrast(im, amount=1):
 
     assert amount >= 0
 
-    return im.point(lambda x: round(x * amount + -127.5 * amount + 127.5))
+    def adjust(x: int | float) -> int:
+        return round(x * amount + -127.5 * amount + 127.5)
+
+    return im.point(adjust)

@@ -13,7 +13,10 @@
 # limitations under the License.
 
 
-def brightness(im, amount=1):
+from PIL.Image import Image
+
+
+def brightness(im: Image, amount: float = 1) -> Image:
     """Adjusts the brightness.
 
     A brightness operation is equivalent to the following matrix operation:
@@ -39,4 +42,7 @@ def brightness(im, amount=1):
 
     assert amount >= 0
 
-    return im.point(lambda x: round(x * amount))
+    def adjust(x: int | float) -> int:
+        return round(x * amount)
+
+    return im.point(adjust)

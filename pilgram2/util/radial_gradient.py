@@ -21,7 +21,7 @@ from PIL import Image
 from pilgram2.util import fill, invert
 
 
-def _prepared_radial_gradient_mask(size, scale=1):
+def _prepared_radial_gradient_mask(size: tuple[int, int], scale: float = 1):
     """Returns prepared radial gradient mask"""
 
     mask = invert(Image.radial_gradient("L"))
@@ -34,7 +34,7 @@ def _prepared_radial_gradient_mask(size, scale=1):
     return mask.resize(size, box=box)
 
 
-def radial_gradient_mask(size, length=0, scale=1, center=(0.5, 0.5)):
+def radial_gradient_mask(size: tuple[int, int], length: float = 0, scale: float = 1, center: tuple[float, float] = (0.5, 0.5)):
     """Creates mask image for radial gradient image.
 
     Arguments:

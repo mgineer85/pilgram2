@@ -40,7 +40,7 @@ def test_color_dodge():
     ]
     expected = [pytest.approx(c, abs=1) for c in expected]
 
-    assert list(color_dodge.getdata()) == expected  # almost eq
+    assert list(iter(color_dodge.getdata())) == expected  # almost eq
 
 
 def test_color_dodge_alpha_support(mocker):

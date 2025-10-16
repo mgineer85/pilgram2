@@ -98,7 +98,7 @@ def test_lum_im():
     im = util.fill((1, 1), [0, 128, 255])
     im_lum = lum_im(im)
 
-    assert list(im_lum.getdata()) == [round(103.57)]
+    assert list(iter(im_lum.getdata())) == [round(103.57)]
 
 
 def test_set_lum():
@@ -129,7 +129,7 @@ def test_set_lum():
 
     im_set_lum = Image.merge("RGB", [_convert(band, "L").im for band in bands])
     expected2 = [(floor(41.13881001122631), floor(148.48874067225782), 255)]
-    assert list(im_set_lum.getdata()) == expected2
+    assert list(iter(im_set_lum.getdata())) == expected2
 
 
 def test_sat():

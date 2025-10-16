@@ -16,7 +16,7 @@ import numpy as np
 from PIL import Image
 
 
-def add(im1, im2):
+def add(im1: Image.Image, im2: Image.Image) -> Image.Image:
     """Adds two images.
 
     Arguments:
@@ -28,9 +28,9 @@ def add(im1, im2):
     """
 
     # NOTE: When using Vanilla Pillow, `ImageChops.add` is slower than numpy
-    im1 = np.asarray(im1, dtype=np.int16)  # avoid overflow
-    im2 = np.asarray(im2)
-    im = im1 + im2
+    arr1 = np.asarray(im1, dtype=np.int16)  # avoid overflow
+    arr2 = np.asarray(im2)
+    im = arr1 + arr2
     im = im.clip(0, 255).astype(np.uint8)
 
     return Image.fromarray(im)

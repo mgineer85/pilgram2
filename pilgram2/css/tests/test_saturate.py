@@ -30,7 +30,7 @@ def test_saturate_1():
     saturated_im = css.saturate(im, 1)
     saturated_im2 = css.saturate(im)
 
-    assert list(saturated_im.getdata()) == list(saturated_im2.getdata())
+    assert list(iter(saturated_im.getdata())) == list(iter(saturated_im2.getdata()))
     assert saturated_im.size == im.size
     assert saturated_im.mode == im.mode
 
@@ -40,7 +40,7 @@ def test_saturate_greater_than_1():
     saturated_im = css.saturate(im, 2)
     saturateed_im2 = css.saturate(im, 1)
 
-    assert list(saturated_im.getdata()) != list(saturateed_im2.getdata())
+    assert list(iter(saturated_im.getdata())) != list(iter(saturateed_im2.getdata()))
     assert saturated_im.size == im.size
     assert saturated_im.mode == im.mode
 
@@ -50,7 +50,7 @@ def test_saturate_0():
     saturated_im = css.saturate(im, 0)
     grayscaled_im = css.grayscale(im)
 
-    assert list(saturated_im.getdata()) == list(grayscaled_im.getdata())
+    assert list(iter(saturated_im.getdata())) == list(iter(grayscaled_im.getdata()))
     assert saturated_im.size == im.size
     assert saturated_im.mode == im.mode
 
@@ -68,6 +68,6 @@ def test_saturate_hsv():
     saturated_im2 = css.saturate(im2)
     saturated_im2_rgb = saturated_im2.convert("RGB")
 
-    assert list(saturated_im.getdata()) == list(saturated_im2_rgb.getdata())
+    assert list(iter(saturated_im.getdata())) == list(iter(saturated_im2_rgb.getdata()))
     assert saturated_im2.size == im2.size
     assert saturated_im2.mode == im2.mode

@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-def clip(a, a_min=0, a_max=255):
+def clip(a: float, a_min: float = 0, a_max: float = 255):
     """Clips value
 
     Arguments:

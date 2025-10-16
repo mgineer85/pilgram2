@@ -40,7 +40,7 @@ def test_soft_light():
     ]
     expected = [pytest.approx(c, abs=1) for c in expected]
 
-    assert list(soft_light.getdata()) == expected  # almost eq
+    assert list(iter(soft_light.getdata())) == expected  # almost eq
 
 
 def test_soft_light_alpha_support(mocker):
