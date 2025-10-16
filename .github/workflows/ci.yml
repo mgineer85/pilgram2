@@ -12,25 +12,24 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
     name: Python ${{ matrix.python-version }}
     if: ${{ github.repository_owner == 'mgineer85' }}
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - name: Set up Python and uv ${{ matrix.python-version }}
+        uses: astral-sh/setup-uv@v7
         with:
           python-version: ${{ matrix.python-version }}
-      - name: install pdm
+          enable-cache: true
+      - name: install the project
         run: |
-          pipx install pdm # on hosted pipx is installed
-      - name: install pilgram2
-        run: |
-          pdm install
+          uv sync --all-extras --dev
       - name: Run pytest
         run: |
-          pdm run test
+          uv run poe test
+      
       - name: Upload to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
