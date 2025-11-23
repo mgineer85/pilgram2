@@ -28,7 +28,7 @@ def poprocket(im):
 
     cb = util.or_convert(im, "RGB")
 
-    radial_gradient = util.radial_gradient(cb.size, [[206, 39, 70, 0.75], [0, 0, 0, 0.0]], [0.4, 0.8])
+    radial_gradient = util.radial_gradient(cb.size, [[206, 39, 70, 0.65], [0, 0, 0, 0.0]], [0.4, 1.0])
 
     cr = css.blending.screen(cb, radial_gradient)
     cr = css.sepia(cr, 0.15)
