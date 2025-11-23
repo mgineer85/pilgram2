@@ -33,7 +33,7 @@ keywords = [
   "data-augmentation",
 ]
 
-dependencies = ["numpy>=2.0.1", "pillow>=10.0.0"]
+dependencies = ["numpy>=2.0.1", "pillow>=10.3.0"]
 
 [project.urls]
 Homepage = "https://github.com/mgineer85/pilgram2"
