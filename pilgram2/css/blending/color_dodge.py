@@ -43,9 +43,8 @@ def _color_dodge(im1, im2):
     return Image.merge(
         "RGB",
         [
-            ImageMath.unsafe_eval(
-                "f(cb, cs_inv)",
-                f=_color_dodge_image_math,
+            ImageMath.lambda_eval(
+                lambda args: _color_dodge_image_math(args["cb"], args["cs_inv"]),
                 cb=cb,
                 cs_inv=cs_inv,
             )

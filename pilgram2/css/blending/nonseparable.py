@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from PIL.ImageMath import _Operand
+from PIL.ImageMath import imagemath_float as _float
 from PIL.ImageMath import imagemath_max as _max
 from PIL.ImageMath import imagemath_min as _min
 
@@ -79,7 +81,7 @@ def _clip_color(c):
     return (r, g, b)
 
 
-def lum(c):
+def lum(c) -> _Operand:
     """Returns luminosity as ImageMath operands.
 
     The formula is defined as:
@@ -89,14 +91,13 @@ def lum(c):
     See: https://www.w3.org/TR/compositing-1/#blendingnonseparable
 
     Arguments:
-        c: A tuple/list of 3 ImageMath operands. The color.
+        c: A tuple of 3 ImageMath operands. The color.
 
     Returns:
-        A tuple/list of 3 ImageMath operands. The luminosity.
+        An ImageMath operand. The luminosity.
     """
-
     r, g, b = c
-    return r * 0.3 + g * 0.59 + b * 0.11
+    return _float(r) * 0.3 + _float(g) * 0.59 + _float(b) * 0.11
 
 
 def lum_im(im):
