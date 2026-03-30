@@ -42,7 +42,7 @@ Repository = "https://github.com/mgineer85/pilgram2"
 
 
 [build-system]
-requires = ["uv_build>=0.8.3,<0.10.0"]
+requires = ["uv_build>=0.8.3,<0.12.0"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
